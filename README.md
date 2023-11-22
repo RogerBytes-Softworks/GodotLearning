@@ -1,9 +1,9 @@
-# Portfolio
+# GodotLearning
 
 [![Build Status](https://travis-ci.org/votre-utilisateur/votre-projet.svg?branch=master)](https://travis-ci.org/votre-utilisateur/votre-projet)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-Une brève description de votre projet.
+Mes débuts sur Godot
 
 [Site internet](https://rogerbytes-softworks.github.io/Portfolio/)
 
