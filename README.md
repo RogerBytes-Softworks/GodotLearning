@@ -5,19 +5,21 @@
 
 Mes débuts sur Godot
 
-[Site internet](https://rogerbytes-softworks.github.io/Portfolio/)
+[Documentation officielle de Godot](https://docs.godotengine.org/en/stable/index.html)
 
 ## Installation
 
-Instructions pour installer et configurer votre projet.
+Installer Godot avec
+
+```zsh
+flatpak install -y flathub org.godotengine.GodotSharp
+```
 
 ## Utilisation
 
-Instructions sur la façon d'utiliser votre projet. Incluez des exemples de code si nécessaire.
+C'est juste mon suivi de l'introduction à Godot depuis leur [section introduction](https://docs.godotengine.org/en/stable/getting_started/introduction/index.html)
 
-## Contribuer
-
-Les contributions sont les bienvenues ! Veuillez consulter [CONTRIBUTING.md](CONTRIBUTING.md) pour obtenir des instructions sur la façon de contribuer à ce projet.
+Je suis la documentation de l'introduction jusqu'à votre premier jeu 3D.
 
 ## Licence
 
