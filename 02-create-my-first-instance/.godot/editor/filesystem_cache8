@@ -1,0 +1,13 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1700172315
+A lire.txt::TextFile::-1::1700172162::0::1::::<><>::
+Ball.tscn::PackedScene::8064037037699315273::1700171944::0::1::::<><>::uid://dv6rx85s1gy3i::::res://assets/ballBlue_10.png
+exemple-diagramme.webp::CompressedTexture2D::4562496445909803824::1700172471::1700172504::1::::<><>::
+icon.svg::CompressedTexture2D::7951457360396824501::1698074263::1700171235::1::::<><>::
+Main.gd::GDScript::-1::1698074263::0::1::::<>Node<>::
+Main.tscn::PackedScene::2580185021150866616::1700171944::0::1::::<><>::res://Main.gd<>uid://dm5jrnxmxnuof::::res://Ball.tscn<>uid://dkq1swbmmxmbq::::res://assets/Bouncy Platform Long.png
+README.md::TextFile::-1::1698074263::0::1::::<><>::
+::res://assets/::1700171235
+ballBlue_10.png::CompressedTexture2D::8698298520458212912::1698074263::1700171235::1::::<><>::
+Bouncy Platform Long.png::CompressedTexture2D::7895792475247486234::1698074263::1700171235::1::::<><>::
+Bouncy Platform Medium.png::CompressedTexture2D::3192301516354317244::1698074263::1700171235::1::::<><>::

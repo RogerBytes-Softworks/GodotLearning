@@ -1,0 +1,1 @@
+Il est recommendé de faire des diagramme comme base de projet avant de coder, par exemple "exemple-diagramme.webp"
