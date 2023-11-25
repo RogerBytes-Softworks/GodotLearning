@@ -16,7 +16,7 @@ flatpak install -y flathub org.godotengine.GodotSharp
 ```
 
 Il il y a aussi un module à télécharger :
-https://github.com/godotengine/FBX2glTF/releases/latest
+<https://github.com/godotengine/FBX2glTF/releases/latest>
 [Dernière release de FBX2glTF](https://github.com/godotengine/FBX2glTF/releases/latest)
 
 ## En cas de souci "Blender path"
