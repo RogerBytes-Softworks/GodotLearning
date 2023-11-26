@@ -199,11 +199,15 @@ Si vous avez le message :
 modules/gltf/register_types.cpp:73 - Blend file import is enabled in the project settings, but no Blender path is configured in the editor settings. Blend files will not be imported.
 ``````
 
-Ouvrez Godot et allez dans le menu "Editor" (Éditeur).
-Sélectionnez "Editor Settings" (Paramètres de l'éditeur) dans le menu déroulant.
-Dans la fenêtre des paramètres de l'éditeur, recherchez la section "Import/Export" (Importer/Exporter).
-Sous la section "FileSystem/Import", recherchez la catégorie "GLTF" et trouvez le champ "Path to Blender Executable" (Chemin vers l'exécutable de Blender).
-Cliquez sur le bouton "..." à côté du champ "Path to Blender Executable" et sélectionnez le chemin vers l'exécutable de Blender sur votre système.
+Ouvrez Godot et allez dans le menu "Editor/Editor Settings..." (Éditeur).
+
+Dans "FileSystem/Import"
+
+Blender path : "/usr/bin/"
+FBX2glTF path : "/home/YOUR_USERNAME/.godot/FBX2glTF-linux-x86_64"
+
+Puis cliquez sur "Close"
+
 Enregistrez les paramètres de l'éditeur et redémarrez Godot.
 
 ## Utilisation
