@@ -289,7 +289,8 @@ Cliquez sur le bouton "Add..." et choisissez votre "cible d’exportation :" Cho
 
 ### Export web qui ne veut pas se lancer
 
-Si le message 
+Si le message
+
 `Cross Origin Isolation - Check web server configuration (send correct headers)`
 
 ou
@@ -298,9 +299,7 @@ ou
 
 https://stackoverflow.com/questions/76924109/error-the-following-features-required-to-run-godot-projects-on-the-web-are-missi
 
-
 si erreur
-
 
 ## Compiler Godot soi-même
 
