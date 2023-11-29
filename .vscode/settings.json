@@ -5,6 +5,7 @@
     "flathub",
     "gltf",
     "godotengine",
-    "maxdepth"
+    "maxdepth",
+    "scons"
   ]
 }

@@ -26,13 +26,13 @@ sudo apt install -y dotnet-sdk-7.0 && wget $(curl -s https://api.github.com/repo
 Version normale à jour (FBX2glTF inclus) :
 
 ```bash
-rm -r .godot && sudo rm /usr/bin/godot && sudo rm /usr/share/applications/godot.desktop && sudo update-desktop-database
+sudo rm -r .godot && sudo rm /usr/bin/godot && sudo rm /usr/share/applications/godot.desktop && sudo update-desktop-database
 ```
 
 Version C# à jour (FBX2glTF inclus) :
 
 ```bash
-rm -r .godot && sudo rm /usr/bin/godot-dotnet && sudo rm /usr/share/applications/godot-dotnet.desktop && sudo update-desktop-database
+sudo rm -r .godot && sudo rm /usr/bin/godot-dotnet && sudo rm /usr/share/applications/godot-dotnet.desktop && sudo update-desktop-database
 ```
 
 ## Réglages de Godot
@@ -272,9 +272,39 @@ sudo rm /usr/share/applications/godot-dotnet.desktop #selon votre version
 sudo update-desktop-database
 ```
 
-## Compilation pour le web
+## Comment compiler votre projet
 
-## Dépendances
+### Installer une première fois les template d'export
+
+Dans Godot, ouvrez un projet, et allez dans "Editor/Manage Export Templates"
+
+Choisissez "Download from:" et mettez "Official Github Releases mirror" et cliquez sur "Download and Install"
+
+Quand le téléchargement est fini le massage en rouge changera pour dire que les template sont installés (et ne sera plus en rouge), cliquez sur "close"
+
+### Lancer l'Export
+
+Ensuite allez dans "Project/Export..."
+Cliquez sur le bouton "Add..." et choisissez votre "cible d’exportation :" Choisir "Web" ou autre.
+
+### Export web qui ne veut pas se lancer
+
+Si le message 
+`Cross Origin Isolation - Check web server configuration (send correct headers)`
+
+ou
+
+`SharedArrayBuffer - Check web server configuration (send correct headers)`
+
+https://stackoverflow.com/questions/76924109/error-the-following-features-required-to-run-godot-projects-on-the-web-are-missi
+
+
+si erreur
+
+
+## Compiler Godot soi-même
+
+### Dépendances
 
 ```bash
 # Emscripten
@@ -326,17 +356,18 @@ echo 'export PATH="$HOME/.local/bin/:$PATH"' >> ~/.zshrc
 source ~/.zshrc
 ```
 
-## Compilation
+### Compilation
 
 Vérifiez que emsdk est bien ajouté au path avec la commande `emsdk list`
 
-Allez dans le répertoire du projet, dans votre terminal, puis utilisez scons avec ces commandes :
+A faire une autre fois pas le temps
+
+utilisez scons avec ces commandes :
 
 ```bash
 scons platform=web target=template_release
 scons platform=web target=template_debug
 ```
-
 
 ## Auteurs
 
