@@ -335,6 +335,10 @@ sudo update-alternatives --set python3 /usr/bin/python$X.$Y
 ## ou pour mettre la dernier index
 sudo update-alternatives --auto python3
 
+## Attention de TOUJOURS REMETTRE APRES LA VERSION PAR DÉFAUT !!!
+
+## Pour finir on installe pip3
+sudo nala install -y python3-pip
 
 
 ```
