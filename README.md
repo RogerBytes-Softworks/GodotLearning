@@ -277,7 +277,7 @@ sudo update-desktop-database
 Dépendances :
 
 ```bash
-#emscripten
+# Emscripten
 ## créer on dossier local lib dans .godot
 mkdir -p ~/.godot/localesLib
 cd ~/.godot/localesLib
@@ -300,14 +300,17 @@ source ~/.zshrc
 ## cmake en lib secondaire
 sudo nala install -y cmake
 
+# ------------------------------------------
+
 # Pour installer la dernière version de python
+
 sudo add-apt-repository -y ppa:deadsnakes/ppa
 sudo apt update
 ## Remplacez 3 et 12 par la version que vous voulez,ici c'est la 3.12.
 X="3"
 Y="12"
 
-## Ou choisir la denière version en utilisante curl pour récupérer les versions du site officiel et grep pour filtrer la dernière version 3.x
+## Ou choisir la dernière version en utilisant curl pour récupérer les versions du site officiel et grep pour filtrer la dernière version 3.x
 latest_python_version=$(curl -s https://www.python.org/downloads/ | grep "Download Python 3." | head -1 | grep -oP 'Python \K[0-9]+\.[0-9]+')
 
 ## Découpez la version pour obtenir les variables X et Y
@@ -320,12 +323,20 @@ echo "Latest Python 3.x version is: $X.$Y"
 ## Enfin lancez l'installation avec ces variables :
 sudo nala install -y python$X.$Y python$X.$Y-venv python$X.$Y-dev
 
+## Ajouter le choix de version de python (Vérifiez quelle version de python vous avez par défaut dans /usr/bin/ moi c'est la 3.10)
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 1
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python$X.$Y 2
+
+## Lancez le menu interactif pour choisir votre version avec
+sudo update-alternatives --config python3
+
+## ou choisissez directement avec set
+sudo update-alternatives --set python3 /usr/bin/python$X.$Y
+## ou pour mettre la dernier index
+sudo update-alternatives --auto python3
 
 
 
-
-cd
-rm emsdk
 ```
 
 ## Auteurs
