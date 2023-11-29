@@ -26,6 +26,8 @@ func show_game_over():
 	# Générer un timer unique et attendre qu'il se finisse
 	await get_tree().create_timer(1.0).timeout
 	
+	# On réaffiche le bouton start
+	$StartButton.show()
 
 func update_score(score):
 	$ScoreLabel.text = str(score)
