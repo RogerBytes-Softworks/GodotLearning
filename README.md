@@ -274,7 +274,7 @@ sudo update-desktop-database
 
 ## Compilation pour le web
 
-Dépendances :
+## Dépendances
 
 ```bash
 # Emscripten
@@ -291,7 +291,7 @@ source ./emsdk_env.sh
 echo "" >> ~/.zshrc
 echo "# Cacher l'alerte de EMSDK" >> ~/.zshrc
 echo "export EMSDK_QUIET=1" >> ~/.zshrc
-## Ajouter le chemin actuel à la configuration de zsh dans .zshrc
+## Ajouter le chemin actuel au PATH la configuration de zsh dans .zshrc
 echo "" >> ~/.zshrc
 echo "# Ajouter le chemin actuel EMSDK au shell" >> ~/.zshrc
 echo "source \"$PWD/emsdk_env.sh\"" >> ~/.zshrc
@@ -302,46 +302,33 @@ sudo nala install -y cmake
 
 # ------------------------------------------
 
-# Pour installer la dernière version de python
+# Pour installer python
 
-sudo add-apt-repository -y ppa:deadsnakes/ppa
-sudo apt update
-## Remplacez 3 et 12 par la version que vous voulez,ici c'est la 3.12.
-X="3"
-Y="12"
-
-## Ou choisir la dernière version en utilisant curl pour récupérer les versions du site officiel et grep pour filtrer la dernière version 3.x
-latest_python_version=$(curl -s https://www.python.org/downloads/ | grep "Download Python 3." | head -1 | grep -oP 'Python \K[0-9]+\.[0-9]+')
-
-## Découpez la version pour obtenir les variables X et Y
-X=$(echo $latest_python_version | cut -d. -f1)
-Y=$(echo $latest_python_version | cut -d. -f2)
-
-## Affichez X et Y pour vérifier
-echo "Latest Python 3.x version is: $X.$Y"
-
-## Enfin lancez l'installation avec ces variables :
-sudo nala install -y python$X.$Y python$X.$Y-venv python$X.$Y-dev
-
-## Ajouter le choix de version de python (Vérifiez quelle version de python vous avez par défaut dans /usr/bin/ moi c'est la 3.10)
-sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 1
-sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python$X.$Y 2
-
-## Lancez le menu interactif pour choisir votre version avec
-sudo update-alternatives --config python3
-
-## ou choisissez directement avec set
-sudo update-alternatives --set python3 /usr/bin/python$X.$Y
-## ou pour mettre la dernier index
-sudo update-alternatives --auto python3
-
-## Attention de TOUJOURS REMETTRE APRES LA VERSION PAR DÉFAUT !!!
+sudo nala install -y python3
 
 ## Pour finir on installe pip3
 sudo nala install -y python3-pip
 
+# ------------------------------------------
+
+# Pour installer SCons 3.0+
+
+## Pour l'installer avec pop
+pip install SCons
 
 ```
+
+## Compilation
+
+Vérifiez que emsdk est bien ajouté au path avec la commande `emsdk list`
+
+Allez dans le répertoire du projet, dans votre terminal, puis :
+
+
+```bash
+
+```
+
 
 ## Auteurs
 
