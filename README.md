@@ -297,8 +297,6 @@ ou
 
 `SharedArrayBuffer - Check web server configuration (send correct headers)`
 
-https://stackoverflow.com/questions/76924109/error-the-following-features-required-to-run-godot-projects-on-the-web-are-missi
-
 si erreur
 
 ## Compiler Godot soi-même
