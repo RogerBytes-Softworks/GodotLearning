@@ -316,17 +316,25 @@ sudo nala install -y python3-pip
 ## Pour l'installer avec pop
 pip install SCons
 
+## Ajouter le chemin de .local/bin/ au PATH la configuration de zsh dans .zshrc
+echo "" >> ~/.zshrc
+echo "# Ajouter le chemin de .local/bin/ au shell" >> ~/.zshrc
+echo 'export PATH="$HOME/.local/bin/:$PATH"' >> ~/.zshrc
+
+
+## Réactualiser le shell avec les derniers réglages ajoutés à .zshrc
+source ~/.zshrc
 ```
 
 ## Compilation
 
 Vérifiez que emsdk est bien ajouté au path avec la commande `emsdk list`
 
-Allez dans le répertoire du projet, dans votre terminal, puis :
-
+Allez dans le répertoire du projet, dans votre terminal, puis utilisez scons avec ces commandes :
 
 ```bash
-
+scons platform=web target=template_release
+scons platform=web target=template_debug
 ```
 
 
