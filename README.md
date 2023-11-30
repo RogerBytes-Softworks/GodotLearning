@@ -89,6 +89,56 @@ Editors/Editors Settings.../Dotnet/Editor
 
 Editors/Editors Settings.../Dotnet/Build
 
+## Comment compiler votre projet
+
+### Installer une première fois les template d'export
+
+Dans Godot, ouvrez un projet, et allez dans "Editor/Manage Export Templates"
+
+Choisissez "Download from:" et mettez "Official Github Releases mirror" et cliquez sur "Download and Install"
+
+Quand le téléchargement est fini le massage en rouge changera pour dire que les template sont installés (et ne sera plus en rouge), cliquez sur "close"
+
+### Lancer l'Export
+
+Ensuite allez dans "Project/Export..."
+Cliquez sur le bouton "Add..." et choisissez votre "cible d’exportation :" Choisir "Web" ou autre.
+
+### Export Web
+
+Larsque vous exportez vers du web, pensez à nommer le fichier en "index.html", comme ça il se lance par défaut.
+
+En outre, une fonctionnalité (apportée par ES8) est requise pour faire tourner le jeu, il s'agit de "ArraySharedBuffer", qui n'est pas activable nativment si on ne peut pas configurer le serveur, par exemple sur github page.
+
+Cepandant il y a un script js qui permet de l'activer sur ce depôt : [coi-service](https://github.com/gzuidhof/coi-serviceworker).
+Dans le répertoire où se trouve "index.html" faites
+
+```bash
+curl -O https://raw.githubusercontent.com/gzuidhof/coi-serviceworker/master/coi-serviceworker.js
+```
+
+Dans le fichier "index.html" ajoutez la ligne suivante au head
+
+```html
+<script src="./coi-serviceworker.js"></script>
+```
+
+### Publier son jeu HTML5 sur itch.io
+
+Après avoir fait son export web, prendre tous les fichiers et les mettre dans un dossier "game", et compresser le dossier "game" en zip
+
+Allez sur itchio et "créez un nouveau projet", ou directement sur [itch.io/game/new](https://itch.io/game/new)
+
+Mettre un Titre
+Catégorisation : Jeux
+Type de projet : HTML
+
+Cliquer sur "Mettre en ligne des fichiers" et choisir le fichier "game.zip"
+
+Et SURTOUT : cocher "SharedArrayBuffer support — (Experimental) This may break parts of the page or your project. Only enable if you know you need it. Learn more"
+
+et enfin, tout en bas, cliquer sur "Sauvegarder & voir la page"
+
 ## Installation détaillée
 
 Requis (pour la version dotnet) :
@@ -271,56 +321,6 @@ sudo rm /usr/share/applications/godot.desktop
 sudo rm /usr/share/applications/godot-dotnet.desktop #selon votre version
 sudo update-desktop-database
 ```
-
-## Comment compiler votre projet
-
-### Installer une première fois les template d'export
-
-Dans Godot, ouvrez un projet, et allez dans "Editor/Manage Export Templates"
-
-Choisissez "Download from:" et mettez "Official Github Releases mirror" et cliquez sur "Download and Install"
-
-Quand le téléchargement est fini le massage en rouge changera pour dire que les template sont installés (et ne sera plus en rouge), cliquez sur "close"
-
-### Lancer l'Export
-
-Ensuite allez dans "Project/Export..."
-Cliquez sur le bouton "Add..." et choisissez votre "cible d’exportation :" Choisir "Web" ou autre.
-
-### Export Web
-
-Larsque vous exportez vers du web, pensez à nommer le fichier en "index.html", comme ça il se lance par défaut.
-
-En outre, une fonctionnalité (apportée par ES8) est requise pour faire tourner le jeu, il s'agit de "ArraySharedBuffer", qui n'est pas activable nativment si on ne peut pas configurer le serveur, par exemple sur github page.
-
-Cepandant il y a un script js qui permet de l'activer sur ce depôt : [coi-service](https://github.com/gzuidhof/coi-serviceworker).
-Dans le répertoire où se trouve "index.html" faites
-
-```bash
-curl -O https://raw.githubusercontent.com/gzuidhof/coi-serviceworker/master/coi-serviceworker.js
-```
-
-Dans le fichier "index.html" ajoutez la ligne suivante au head
-
-```html
-<script src="./coi-serviceworker.js"></script>
-```
-
-### Publier son jeu HTML5 sur itch.io
-
-Après avoir fait son export web, prendre tous les fichiers et les mettre dans un dossier "game", et compresser le dossier "game" en zip
-
-Allez sur itchio et "créez un nouveau projet", ou directement sur [itch.io/game/new](https://itch.io/game/new)
-
-Mettre un Titre
-Catégorisation : Jeux
-Type de projet : HTML
-
-Cliquer sur "Mettre en ligne des fichiers" et choisir le fichier "game.zip"
-
-Et SURTOUT : cocher "SharedArrayBuffer support — (Experimental) This may break parts of the page or your project. Only enable if you know you need it. Learn more"
-
-et enfin, tout en bas, cliquer sur "Sauvegarder & voir la page"
 
 ## Compiler Godot soi-même
 
